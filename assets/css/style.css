@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #363d7c;
+    --secondary-color: #144a52;
+    --tertiary-color: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+body {
+font-family: 'Courier New', Courier, monospace;
+background-color: rgb(white);
+color: rgb(61, 102, 102);
+}
+
+/* BEGIN HEADER STYLING */
+header div {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    Margin: 20px 200px;
+    padding: 5px;
+    align-content: center;
+}
+.style-indiv {
+font-size: .50cm;
+font-weight: 100;
+background-color: transparent; 
+}
+
+/* STYLE FOR BUTTON*/
+.high-score {
+    font-size: .50cm;
+    border: none;
+    background-color: transparent;
+    padding: 20px; 
+}
+
+section .wrapper{
+    display: grid;
+    grid-template-rows: 1fr, 2fr, 1fr;
+    grid-auto-rows: (10px, auto);
+    grid-gap: .05em; 
+    justify-items: center; 
+    border: 2px solid black;
+   /* Margin: 20px 200px;*/
+}
+section .style-6{
+    display: grid;
+    grid-template-columns: 2fr, ;
+    grid-auto-rows: (10px, auto);
+    grid-gap: .05em; 
+    justify-content: space-between; 
+    border: 2px solid black;
+   /* Margin: 20px 200px;*/
+}
+.list-inner {
+background-color: aqua;
+justify-items: start;
+}
+
+section div {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    Margin: 20px 200px;
+    padding: 10px;
+}
+/* STYLING FOR QUESTIONS */
+.questions-ul {
+    list-style-type: none;
+    display: contents;
+  }
+
+.list-inner {
+    display: grid;
+    grid-template-rows: 1fr, 2fr, 1fr;
+    grid-auto-rows: (10px, auto);
+    grid-gap: .05em; 
+    justify-items: center; 
+}
+/* BUTTON STYLE BODY */
+.btn-style-main {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: .50cm;
+    padding: 8px;
+    margin: 4px;
+  }
+
+  .btn-style-main:active {
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px gray; 
+    transform: translateY(1px);
+  }
+
+

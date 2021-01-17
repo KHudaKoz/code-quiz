@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz </title>
+    <link rel="stylesheet" href='./assets/css/style.css'>
+</head>
+
+<body>
+    <!-- BEGIN HEADER-->
+    <header class="header-title" id="header">
+        <div class="style-outdiv">
+            <div class="style-indiv">
+                <button class="high-score" id="veiw-score" type="button"> Height Score</button>
+            </div>
+            <div class="style-indiv">
+                <p>75 Second'ish</p>
+            </div>
+        </div>
+    </header>
+    <!--BEGIN MAIN -->
+    <main>
+    <!-- BEGIN INITIAL CALLENG LAYOUT-->
+        <section class="wrapper" id="main-window">
+            <!-- TOP DIV CONTENT [TITLE/QUESTION]-->
+            <div class="main-title">
+                <h1 class="switch" id="switch-out">Coding Quiz Challenge</h1>
+            </div>
+            <!--MIDDLE DIV CONTENT [OPENING PARAGRAPH/POSSIBLE ANSWERS]-->
+            <div class="main-display" id="question-answer">
+                <p class="p-style" id="question-li">Try to answer the follwing code-related question with the time
+                    limit. Keep in mind that incorrect answers will penalize your score-time by 10 seconds</p>
+            </div>
+            <!--BOTTOM DIV CONTENT [START/RESULTS]-->
+            <div class="results" id="row-bottow">
+                <button id="begin" class="btn-begin btn-style-main" id="button-start">Start Quiz</button>
+            </div>
+        </section>
+
+        <!--BEGIN HIDDEN SECTIONS-->
+        <section class="container" id="questions">
+            <div class="list style-1">     
+              <div class="list-inner">
+                    <ul class="questions-ul">
+                        <h2 id="question">Here is the question</h2>
+                        <li class="questions-li "><button id="answer-1" value="0" type="button"
+                                class="answer-btn btn-style-main">Answer-1</button></li>
+                        <li class="questions-li"><button id="answer-2" value="1" type="button"
+                                class="answer-btn btn-style-main">Answer-2</button></li>
+                        <li class="questions-li"><button id="answer-3" value="2" type="button"
+                                class="answer-btn btn-style-main">Answer-3</button></li>
+                        <li class="questions-li"><button id="answer-4" value="3" type="button"
+                                class="answer-btn btn-style-main btn-style-1">Answer-4</button></li>
+                    </ul>
+                    <div id="correct-wrong" class="font-weight-light font-italic">
+                        <hr>
+                        <!-- RUSULTS WILL ADDED HERE VIA JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--FINAL SCORE ANSWER SECTION-->
+        <section class=".wrapper1" id="final-score">
+            <div class="style-indiv">
+                 <div class="style-6">
+                    <h2>All Done!</h2>
+                    <p>Your final score is: <span id="score" class="style-10">0</span></p>
+                   <div><p>Enter initials: <span class="style-11"><input placeholder="initials" id="initials"></span>
+                        <button id="submit-score" class="submit-score-btn btn-style-main">Submit</button>
+                    </p>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="high-scores">
+            <div class="style-1">            
+                <div class="style-6">
+                    <h2>High Scores</h2>
+                    <ol id="high-scores-list"></ol>
+                    <button id="goBack" class="go-back-btn btn-style-main">Go Back</button>
+                    <button id="clearScores" class="clear-scores-btn btn-style-main">Clear All Scores</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
