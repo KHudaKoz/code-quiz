@@ -82,7 +82,6 @@ div .style-2 {
 }
 
 .list-inner {
-background-color: aqua;
 justify-items: start;
 }
 
@@ -123,11 +122,10 @@ justify-items: start;
   
 
   /* HIDE PAGE ELEMENT */
-/*
+
   #questions,
   #final-score,
   #high-scores,
   #correct-wrong {
     display: none;
   }
-  */
