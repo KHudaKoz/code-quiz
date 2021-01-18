@@ -1,9 +1,9 @@
-// VAR DECOLRATIONS
+// DECOLRATIONS
 
 // VAR FOR TIMER   (global) 
 var time = document.querySelector(".timer");
-var secondsLeft = 75;
 var score = document.querySelector("#score");
+var secondsLeft = 75;
 
 //VAR FOR BUTTONS (global )
 const start = document.querySelector("#start");
@@ -16,8 +16,9 @@ var questionsEl = document.querySelector(".all-question");
 
 // ELEMENT LOCATIONS VAR
 let questionEl = document.querySelector("#question");
-let questionCount = 0;
 const correctWrong = document.querySelector("#right-wrong");
+let questionCount = 0;
+
 
 // FINAL SCORE VAR
 const finalEl = document.querySelector("#final-score");
@@ -31,17 +32,20 @@ let scoreList = [];
 // CALL OUT THE ANSWER CLASS BUTTON ASSHOLE
 const ansBtn = document.querySelectorAll("button.answer-btn")
 
+// VAR SUBMITINT, GO, CLEAR, VIEW
+let submitScrBtn = document.querySelector("#submit-score");
+let clearScrBtn = document.querySelector("#clearScores");
+let viewScrBtn = document.querySelector("#view-scores");
+let goBackBtn = document.querySelector("#goBack");
+
+
 // VAR ANSER CALL
 const ans1Btn = document.querySelector("#answer-1");
 const ans2Btn = document.querySelector("#answer-2");
 const ans3Btn = document.querySelector("#answer-3");
 const ans4Btn = document.querySelector("#answer-4");
 
-// VAR SUBMITINT, GO, CLEAR, VIEW
-let submitScrBtn = document.querySelector("#submit-score");
-let goBackBtn = document.querySelector("#goBack");
-let clearScrBtn = document.querySelector("#clearScores");
-let viewScrBtn = document.querySelector("#view-scores");
+
 
 // ARRAY OF FIVE QUESTION, ZERO BASED, NUMBER CORECTLY. 
 const questions = [ 
@@ -210,7 +214,7 @@ goBackBtn.addEventListener("click", function () {
     time.textContent = `Time:${secondsLeft}s`;
 });
 
-// Clear the scores
+// CLEAR SCORE
 clearScrBtn.addEventListener("click", clearScores);
 
 // HIGH SCORE BUTTON ALERT AND DISPLAY LISTENER EVENT
