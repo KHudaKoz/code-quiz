@@ -46,22 +46,22 @@ let viewScrBtn = document.querySelector("#view-scores");
 // ARRAY OF FIVE QUESTION, ZERO BASED, NUMBER CORECTLY. 
 const questions = [ 
     {
-        question: "Commonly used data types do NOT include:",
+        question: "Commonly used data types DO Not include:",
         answers: ["1. strings", "2. booleans", "3. alerts", "4. numbers"],
         correctAnswer: "2"
     },
     {
-        question: "The condition in an if / else statement is enclosed within ____.",
+        question: "The condition in an if / else statement is enclosed within _______.",
         answers: ["1. quotes", "2. curly brackets", "3. parentheses", "4. square brackets"],
         correctAnswer: "1"
     },
     {
-        question: "Arrays in Javascript can be used to store ____.",
+        question: "Arrays in Javascript can be used to store ______.",
         answers: ["1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"],
         correctAnswer: "3"
     },
     {
-        question: "String values must be enclosed within ____ when being assigned to variables.",
+        question: "String values must be enclosed within ________ when being assigned to variables.",
         answers: ["1. commmas", "2. curly brackets", "3. quotes", "4. parentheses"],
         correctAnswer: "2"
     },
@@ -165,7 +165,7 @@ function addScore(event) {
         scoreListEl.append(li);
     }
 
-    // Add to local storage
+    // STORAGE OF SCORE 
     storeScores();
     displayScores();
 }
@@ -175,11 +175,10 @@ function storeScores() {
 }
 
 function displayScores() {
-    // Get stored scores from localStorage
     // Parsing the JSON string to an object
     let storedScoreList = JSON.parse(localStorage.getItem("scoreList"));
 
-    // If scores were retrieved from localStorage, update the scorelist array to it
+    // WHEN RETREIVED FROM LOCAL, ARRAY
     if (storedScoreList !== null) {
         scoreList = storedScoreList;
     }

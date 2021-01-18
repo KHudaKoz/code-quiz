@@ -16,13 +16,13 @@
                 <button class="view-high-scores high-score" id="view-scores" type="button"> View High Scores</button>
             </div>
             <div class="style-indiv">
-                <p class="timer">75 Second'ish</p>
+                <p class="timer">Time: 75</p>
             </div>
         </div>
     </header>
     <!--BEGIN MAIN -->
     <main>
-    <!-- BEGIN INITIAL CALLENG LAYOUT-->
+        <!-- BEGIN INITIAL CALLENG LAYOUT-->
         <section class="wrapper" id="challenge-begins">
             <!-- TOP DIV CONTENT [TITLE/QUESTION]-->
             <div class="main-title">
@@ -30,8 +30,8 @@
             </div>
             <!--MIDDLE DIV CONTENT [OPENING PARAGRAPH/POSSIBLE ANSWERS]-->
             <div class="main-display" id="question-answer">
-                <p class="p-style" id="question-li">Try to answer the follwing code-related question with the time
-                    limit. Keep in mind that incorrect answers will penalize your score-time by 10 seconds
+                <p class="p-style" id="question-li">Try to answer the follwing code-related questions with-in the time
+                    limit. Keep in mind that incorrect answers will penalize your score-time by 10 seconds.
                 </p>
             </div>
             <!--BOTTOM DIV CONTENT [START/RESULTS]-->
@@ -43,8 +43,8 @@
         <!--BEGIN HIDDEN SECTIONS-->
         <!--FIRST SECTION SWITCH-IN -->
         <section class="all-question" id="questions">
-            <div class="questions-list">     
-              <div class="list-inner">
+            <div class="questions-list">
+                <div class="list-inner">
                     <ul class="questions-ul">
                         <h2 class="switch" id="question">Here is the question</h2>
                         <li class="questions-li "><button id="answer-1" value="0" type="button"
@@ -56,11 +56,11 @@
                         <li class="questions-li"><button id="answer-4" value="3" type="button"
                                 class="answer-btn btn-style-main btn-main">Answer-4</button></li>
                     </ul>
-              
+
                     <div id="right-wrong" class="font-weight-light font-italic">
-                     
-                           <hr>   <!-- RUSULTS WILL ADDED HERE VIA JS ONCE RAN -->
-                    </div>   
+
+                        <hr> <!-- RUSULTS WILL ADDED HERE VIA JS ONCE RAN -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -68,30 +68,30 @@
         <!--FINAL SCORE ANSWER SECTION-->
         <section class=".wrapper1" id="final-score">
             <div class="style-indiv">
-                 <div class="style-2">
+                <div class="style-2">
                     <h2>All Done!</h2>
                     <p>Your final score is: <span id="score">0</span></p>
-                   <div class="style-3">
-                       <p class="p-style-1">Enter initials:</P>
-                    <div>
-                        <span class="initials-form style-4"><input placeholder="initials" id="initials" class="span-1"></span>
-                        <button id="submit-score" class="submit-score-btn btn-style-main">Submit</button>
-                    </div>
-                </p>
+                     <p class="p-style-1">Enter initials:
+                     <span class="initials-form style-4"><input placeholder="initials" id="initials"
+                     class="span-1"></span>
+                    <button id="submit-score" class="submit-score-btn btn-style-main">Submit</button>
+                    <hr>
+                        </p>
                 </div>
-            </div> 
+            </div>
+                
         </section>
 
-       <!--HIGH SCORE RESULTS-->
+        <!--HIGH SCORE RESULTS-->
         <section id="high-scores">
-            <div class="style-indiv">            
-                <div class="style-2">
-                    <h2>High Scores</h2>
-                   
+            <div class="style-indiv">
+                <div class="style-3">
+                    <p><h2>High Scores</h2></p>
                     <button id="goBack" class="go-back-btn btn-style-main">Go Back</button>
                     <button id="clearScores" class="clear-scores-btn btn-style-main">Clear All Scores</button>
-                </div><ol class="score-list"></ol>
-            </div> 
+                </div>
+             <ol class="score-list"></ol>
+            </div>
         </section>
     </main>
     <script src="./assets/js/script.js"></script>
