@@ -20,10 +20,10 @@ color: rgb(61, 102, 102);
 
 /* BEGIN HEADER STYLING */
 header div {
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    Margin: 20px 200px;
+    Margin: 20px 20px;
     padding: 5px;
     align-content: center;
 }
@@ -43,7 +43,7 @@ background-color: transparent;
 }
 
 div .p-style {
-    font-size: .50cm;
+    font-size: .75cm;
     padding: 0px 100px ;
 }
 
@@ -58,32 +58,34 @@ section .wrapper{
     grid-template-rows: 1fr, 2fr, 1fr;
     grid-auto-rows: (10px, auto);
     grid-gap: .05em; 
-    justify-items: center; 
-    border: 2px solid black;
+    justify-items: left; 
    /* Margin: 20px 200px;*/
 }
 
 div .style-2{
     display: flex; 
     justify-content: space-between; 
-    border: 1px solid rgb(75, 16, 16);
    
 }
 section div {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
-    border: 2px solid black;
     Margin: 20px 200px;
     padding: 10px;
 }
 div .style-2 {
-    Display: Fles ;
+    Display: Flex;
 }
 
+div .list-inner {
+  justify-content: start;
+}
 .list-inner {
 justify-items: start;
 }
+
+
 
 
 /* STYLING FOR QUESTIONS */
@@ -91,7 +93,9 @@ justify-items: start;
     list-style-type: none;
     display: contents;
   }
-
+.questions-li {
+ width: 250px;
+}
 .list-inner {
     display: grid;
     grid-template-rows: 1fr, 2fr, 1fr;
@@ -104,15 +108,17 @@ justify-items: start;
     background-color: var(--primary-color);
     color: var(--tertiary-color);
     border-radius: 10px;
+    width: 225px;
     border: 1px solid black;
     font-size: .50cm;
     padding: 8px;
     margin: 4px;
+    outline: none;
   }
 
   .btn-style-main:active {
     background-color: var(--secondary-color);
-    box-shadow: 0 2px gray; 
+    box-shadow: 0 2px rgb(214, 71, 71); 
     transform: translateY(1px);
   }
 
@@ -129,3 +135,20 @@ justify-items: start;
   #correct-wrong {
     display: none;
   }
+
+@media screen and (max-width: 980px){
+  header div {
+    justify-content: space-around;
+    Margin: 20px 20px;
+    padding: 5px;
+    align-content: center;
+}
+
+div .p-style {
+  font-size: .50cm;
+
+  text-align: justify;
+  padding: 0px 50px ;
+}
+
+}

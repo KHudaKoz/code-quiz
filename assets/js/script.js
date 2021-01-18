@@ -8,40 +8,42 @@ var score = document.querySelector("#score");
 //VAR FOR BUTTONS (global )
 const start = document.querySelector("#start");
 
-// VAR FOR INTRO 
-const codersIntro = document.querySelector("#coders-challenge-intro");
-// questions
+// VAR FOR INTRO/START
+const codersIntro = document.querySelector("#challenge-begins");
 
-const questionsEl = document.querySelector("#questions");
-//where question goes
+//CALL END LOAD EMLEMENT VAR
+var questionsEl = document.querySelector(".all-question");
+
+// ELEMENT LOCATIONS VAR
 let questionEl = document.querySelector("#question");
 let questionCount = 0;
-const correctWrong = document.querySelector("#correct-wrong");
-// final-scores
+const correctWrong = document.querySelector("#right-wrong");
+
+// FINAL SCORE VAR
 const finalEl = document.querySelector("#final-score");
 let initialsInput = document.querySelector("#initials");
-// high-scores
+
+// HIGHSCORE VAR 
 const highscoresEl = document.querySelector("#high-scores");
-let scoreListEl = document.querySelector("#high-scores-list");
+let scoreListEl = document.querySelector(".score-list");
 let scoreList = [];
 
 // CALL OUT THE ANSWER CLASS BUTTON ASSHOLE
 const ansBtn = document.querySelectorAll("button.answer-btn")
-// answers
+
+// VAR ANSER CALL
 const ans1Btn = document.querySelector("#answer-1");
 const ans2Btn = document.querySelector("#answer-2");
 const ans3Btn = document.querySelector("#answer-3");
 const ans4Btn = document.querySelector("#answer-4");
-// submit score button
-const submitScrBtn = document.querySelector("#submit-score");
-// goBack button
-const goBackBtn = document.querySelector("#goBack");
-// clearScores button
-const clearScrBtn = document.querySelector("#clearScores");
-// view-score button
-const viewScrBtn = document.querySelector("#view-score");
+
+// VAR SUBMITINT, GO, CLEAR, VIEW
+let submitScrBtn = document.querySelector("#submit-score");
+let goBackBtn = document.querySelector("#goBack");
+let clearScrBtn = document.querySelector("#clearScores");
+let viewScrBtn = document.querySelector("#view-scores");
+
 // ARRAY OF FIVE QUESTION, ZERO BASED, NUMBER CORECTLY. 
-// questions; the correct answer is chosen based on the array starting with 0 but allowing the answers to be numbered properly //
 const questions = [ 
     {
         question: "Commonly used data types do NOT include:",
@@ -69,7 +71,8 @@ const questions = [
         correctAnswer: "3"
     }
 ];
-// timer
+
+// TIMER FUNCTION STARTS PROCESS 
 function setTime() {
     let timerInterval = setInterval(function () {
         secondsLeft--;
@@ -83,7 +86,8 @@ function setTime() {
         }
     }, 1000);
 }
-// start quiz fuction
+
+// QUIZ BEGIN FUNCTION
 function startQuiz() {
     codersIntro.style.display = "none";
     questionsEl.style.display = "block";
@@ -93,7 +97,7 @@ function startQuiz() {
     setQuestion(questionCount);
 }
 
-// function to set question; takes in a count and displays the next question/answers
+// SET QUESTION FUNCTION
 function setQuestion(id) {
     if (id < questions.length) {
         questionEl.textContent = questions[id].question;
@@ -104,28 +108,32 @@ function setQuestion(id) {
     }
 }
 
-// function to check answer and then move to next question
+// EVENT FUNCTION CHECK ANSWERS BEGING PROCESS
 function checkAnswer(event) {
     event.preventDefault();
 
-    // show section for yaynay and append message
+    //CREATING ELEMENT OF RIGHT OR WRONG
     correctWrong.style.display = "block";
     let p = document.createElement("p");
     correctWrong.appendChild(p);
 
-    // time out after 1 second
+    // DISPLAY NEW ELEMENT FOR X AMOUNR OF TIME
     setTimeout(function () {
         p.style.display = 'none';
     }, 1000);
 
-    // answer checker; if answer is right it goes to the next without deduction; if wrong -10 and to the next question
+    // RIGHT OR WRONG ANSWER CONDITIONAL STATEMENTS CORRECT
     if (questions[questionCount].correctAnswer === event.target.value) {
         p.textContent = "Correct!";
-    } else if (questions[questionCount].correctAnswer !== event.target.value) {
+    } 
+   
+     // RIGHT OR WRONG ANSWER CONDITIONAL STATEMENTS WRONG
+    else if (questions[questionCount].correctAnswer !== event.target.value) {
         secondsLeft = secondsLeft - 10;
         p.textContent = "Wrong!";
     }
-    // allows to go to the next question
+
+    // CYCLE 
     if (questionCount < questions.length) {
         questionCount++;
     }
@@ -141,7 +149,7 @@ function addScore(event) {
     let init = initialsInput.value.toUpperCase();
     scoreList.push({ initials: init, score: secondsLeft });
 
-    // sort scores
+    // HIGH SCORE SORTING LIST
     scoreList = scoreList.sort((a, b) => {
         if (a.score < b.score) {
           return 1;
@@ -177,25 +185,25 @@ function displayScores() {
     }
 }
 
-// clear scores
+// CLEAR THE STORE
 function clearScores() {
     localStorage.clear();
     scoreListEl.innerHTML="";
 }
 
-// EventListeners
+// START OFF ALL EVENT 
 // Start timer and display first question when click start quiz
 start.addEventListener("click", startQuiz);
 
-// Check answers loop
+// CHECK ANSER LISTENER EVENT
 ansBtn.forEach(item => {
     item.addEventListener('click', checkAnswer);
 });
 
-// Add score
+// ADDING A SCORE EVENT
 submitScrBtn.addEventListener("click", addScore);
 
-// Go Back Button
+// GO BACK LISTENER EVENT FUNCTIN 
 goBackBtn.addEventListener("click", function () {
     highscoresEl.style.display = "none";
     codersIntro.style.display = "block";
@@ -206,7 +214,7 @@ goBackBtn.addEventListener("click", function () {
 // Clear the scores
 clearScrBtn.addEventListener("click", clearScores);
 
-// HIGH SCORE BUTTON ALERT AND DISPLAY
+// HIGH SCORE BUTTON ALERT AND DISPLAY LISTENER EVENT
 viewScrBtn.addEventListener("click", function () {
     if (highscoresEl.style.display === "none") {
         highscoresEl.style.display = "block";
@@ -216,6 +224,6 @@ viewScrBtn.addEventListener("click", function () {
     } 
     
     else {
-        return alert("No scores to show.");
+        return alert("Hey. Take Quiz. There is No High Score.");
     }
 });
