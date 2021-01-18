@@ -12,7 +12,7 @@ To veiw Horiseon's deployed website or the repository containing deployed websit
 
 * For Github Repository [Code Quiz Repository](https://github.com/KHudaKoz/code-quiz).
 ​
-* For Live Deployed Site [Code Quiz Deployed](https://khudakoz.github.io/code-quiz/.).
+* For Live Deployed Site [Code Quiz Deployed](https://khudakoz.github.io/code-quiz/).
 ​
 ​
 ## Table of Contents (Optional)
@@ -33,7 +33,7 @@ Code was presented as a codebase develop pack and was ask to refract code and ma
 ​
 You can view the change by visiting live sites or going to the repository.   
 
-![Image Of Project](https://github.com/KHudaKoz/myportfolio/blob/main/assets/images/Capturemy.PNG)
+![Image Of Project](assets/image/code.png)
 
 ​
 
