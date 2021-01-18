@@ -164,8 +164,10 @@ width: 250px;
  display: flex;
  justify-content: center;
 
-}
+}.score-list {
 
+  Padding-left: 35px;
+}
 
 .span-1 {
   height: 30px;
